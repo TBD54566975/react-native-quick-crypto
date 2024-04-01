@@ -168,7 +168,6 @@ describe('createCipher/createDecipher', () => {
     decipher = crypto.createDecipher('aes192', key);
     // @ts-expect-error
     txt = decipher.update(ciph, 'base64', 'utf-16le');
-    // @ts-expect-error
     txt += decipher.final('utf-16le');
     assert.strictEqual(txt, plaintext);
   });
